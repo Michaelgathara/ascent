@@ -153,7 +153,7 @@ fn bench_tc_for_graph(graph: Vec<(i32, i32)>, name: &str) {
 
 fn main() {
    // bench_tc(1000);
-   bench_tc_path_join_path(1000);
+   // bench_tc_path_join_path(1000);
    // bench_tc_for_graph(loop_graph(4000), "loop 4000");
    //bench_lattice();
    // bench_hash();
