@@ -1,6 +1,9 @@
 use ascent::ascent;
 use rand::Rng;
 use std::collections::HashSet;
+use std::error::Error;
+
+// https://arxiv.org/pdf/2103.15217
 
 ascent! {
    relation edge(i32, i32);
@@ -36,9 +39,10 @@ fn gen_pairs(amnt: i32, edge_amnt: usize) -> Vec<(i32, i32)> {
    // also since the last statement does not have a semicolon, it should indicate that it is a return (which is a CRAZY thing)
 }
 
-fn main() {
+pub fn main() -> Result<(), Box<dyn Error>> {
    let mut prog = AscentProgram::default();
-   prog.edge = gen_pairs(10000000, 10000000);
+   prog.edge = gen_pairs(1000000, 1000000);
    prog.run();
-   println!("Path: {:?}", prog.path);
+   // println!("Path: {:?}", prog.path);
+   Ok(())
 }
