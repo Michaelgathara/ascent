@@ -57,8 +57,8 @@ fn bench_tc_for_graph(graph: Vec<(i32, i32)>, name: &str) {
     tc.run();
 
     let elapsed = before.elapsed();
-    println!("tc for {} took {:?}", name, elapsed);
-    println!("path size: {}", tc.path.len());
+    // println!("tc for {} took {:?}", name, elapsed);
+    // println!("path size: {}", tc.path.len());
 }
 
 /**
@@ -72,5 +72,5 @@ fn bench_tc_path_join_path(nodes_count: i32) {
 }
 
 fn main() {
-    bench_tc_path_join_path(10);
+    bench_tc_path_join_path(100_000);
 }
