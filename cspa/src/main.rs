@@ -1,10 +1,11 @@
 use std::{
     fs::File,
-    io::{prelude::*, BufReader},
+    io::{prelude::*, BufReader, Write},
     time::Instant,
 };
 
 use ascent::*;
+use std::time::Duration;
 
 ascent_par! {
     struct CSPA;
@@ -73,12 +74,18 @@ fn main() {
         })
         .collect();
     println!("dereference file loaded");
+    
+    let total_runs = 1;
+    let mut total_duration = Duration::new(0,0);
 
-    let start = Instant::now();
-    cspa.run();
-    let duration = start.elapsed();
-    println!("Time elapsed in run() is: {:?}", duration);
-    println!("value_flow: {}", cspa.value_flow.len());
-    println!("value_alias: {}", cspa.value_alias.len());
-    println!("memory_alias: {}", cspa.memory_alias.len());
+    for _ in 0..total_runs {
+        let start = Instant::now();
+        cspa.run();
+        total_duration += start.elapsed();
+    }
+    
+    let average_duration = total_duration / total_runs;
+
+    let mut file = File::create("linux_average_time.txt").expect("Unable to create file");
+    writeln!(file, "{} \t {:?}", total_runs, average_duration).expect("Unable to write to file");
 }
