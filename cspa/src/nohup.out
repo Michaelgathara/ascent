@@ -1,0 +1,51 @@
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.95s
+     Running `/home/benches/ascent/target/debug/cspa`
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.94s
+     Running `/home/benches/ascent/target/debug/cspa`
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+    Finished dev [unoptimized + debuginfo] target(s) in 0.03s
+     Running `/home/benches/ascent/target/debug/cspa`
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.94s
+     Running `/home/benches/ascent/target/debug/cspa`
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.92s
+     Running `/home/benches/ascent/target/debug/cspa`
+thread 'main' panicked at library/core/src/time.rs:971:31:
+divide by zero error when dividing duration by scalar
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.94s
+     Running `/home/benches/ascent/target/debug/cspa`
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.96s
+     Running `/home/benches/ascent/target/debug/cspa`

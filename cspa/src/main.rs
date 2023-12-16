@@ -1,11 +1,10 @@
 use std::{
-    fs::File,
+    fs::{File, OpenOptions},
     io::{prelude::*, BufReader, Write},
-    time::Instant,
+    time::{Instant, Duration},
 };
 
 use ascent::*;
-use std::time::Duration;
 
 ascent_par! {
     struct CSPA;
@@ -42,50 +41,66 @@ ascent_par! {
 }
 
 fn main() {
-    let mut cspa = CSPA::default();
-
-    let assign_facts_file =
-        File::open("/home/benches/dataset/dataset/linux/assign.facts").expect("file not found");
-    let assign_facts_reader = BufReader::new(assign_facts_file);
-    cspa.assign = assign_facts_reader
-        .lines()
-        .map(|row| {
-            let row = row.unwrap();
-            let mut iter = row.split_whitespace();
-            let x = iter.next().unwrap().parse::<u32>().unwrap();
-            let y = iter.next().unwrap().parse::<u32>().unwrap();
-            (x, y)
-        })
-        .collect();
-    println!("assign file loaded");
-
-    let dereference_facts_file =
-        File::open("/home/benches/dataset/dataset/linux/dereference.facts").expect("file not found");
-    let dereference_facts_reader = BufReader::new(dereference_facts_file);
-
-    cspa.dereference = dereference_facts_reader
-        .lines()
-        .map(|row| {
-            let row = row.unwrap();
-            let mut iter = row.split_whitespace();
-            let x = iter.next().unwrap().parse::<u32>().unwrap();
-            let y = iter.next().unwrap().parse::<u32>().unwrap();
-            (x, y)
-        })
-        .collect();
-    println!("dereference file loaded");
-    
-    let total_runs = 1;
+    let total_runs = 500;
     let mut total_duration = Duration::new(0,0);
+    for i in 0..total_runs {
+        let mut cspa = CSPA::default();
 
-    for _ in 0..total_runs {
+        let assign_facts_file =
+            File::open("/home/benches/dataset/dataset/linux/assign.facts").expect("file not found");
+        let assign_facts_reader = BufReader::new(assign_facts_file);
+        cspa.assign = assign_facts_reader
+            .lines()
+            .map(|row| {
+                let row = row.unwrap();
+                let mut iter = row.split_whitespace();
+                let x = iter.next().unwrap().parse::<u32>().unwrap();
+                let y = iter.next().unwrap().parse::<u32>().unwrap();
+                (x, y)
+            })
+            .collect();
+  //      println!("assign file loaded");
+
+        let dereference_facts_file =
+            File::open("/home/benches/dataset/dataset/linux/dereference.facts").expect("file not found");
+        let dereference_facts_reader = BufReader::new(dereference_facts_file);
+
+        cspa.dereference = dereference_facts_reader
+            .lines()
+            .map(|row| {
+                let row = row.unwrap();
+                let mut iter = row.split_whitespace();
+                let x = iter.next().unwrap().parse::<u32>().unwrap();
+                let y = iter.next().unwrap().parse::<u32>().unwrap();
+                (x, y)
+            })
+            .collect();
+//        println!("dereference file loaded");
+    
+
         let start = Instant::now();
         cspa.run();
         total_duration += start.elapsed();
+        let j = i + 1; 
+        let average_duration = total_duration / j;
+        
+        let mut file = OpenOptions::new()
+            .write(true)
+            .append(true)
+            .create(true)
+            .open("linux_average_time.txt")
+            .expect("unable to open file");
+        writeln!(file, "{} \t {:?}", j, average_duration).expect("Unable to write to file");
     }
     
-    let average_duration = total_duration / total_runs;
+//    let average_duration = total_duration / total_runs;
 
-    let mut file = File::create("linux_average_time.txt").expect("Unable to create file");
-    writeln!(file, "{} \t {:?}", total_runs, average_duration).expect("Unable to write to file");
+//    let mut file = File::create("linux_average_time.txt").expect("Unable to create file");
+//    let mut file = OpenOptions::new()
+  //      .write(true)
+    //    .append(true)
+      //  .create(true)
+        //.open("linux_average_time.txt")
+        //.expect("unable to open file");
+   // writeln!(file, "{} \t {:?}", total_runs, average_duration).expect("Unable to write to file");
 }
