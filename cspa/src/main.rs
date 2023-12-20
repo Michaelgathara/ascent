@@ -47,7 +47,7 @@ fn main() {
         let mut cspa = CSPA::default();
 
         let assign_facts_file =
-            File::open("/home/benches/dataset/dataset/linux/assign.facts").expect("file not found");
+            File::open("/home/benches/dataset/dataset/httpd/assign.facts").expect("file not found");
         let assign_facts_reader = BufReader::new(assign_facts_file);
         cspa.assign = assign_facts_reader
             .lines()
@@ -62,7 +62,7 @@ fn main() {
   //      println!("assign file loaded");
 
         let dereference_facts_file =
-            File::open("/home/benches/dataset/dataset/linux/dereference.facts").expect("file not found");
+            File::open("/home/benches/dataset/dataset/httpd/dereference.facts").expect("file not found");
         let dereference_facts_reader = BufReader::new(dereference_facts_file);
 
         cspa.dereference = dereference_facts_reader
@@ -88,7 +88,7 @@ fn main() {
             .write(true)
             .append(true)
             .create(true)
-            .open("linux_average_time.txt")
+            .open("httpd_average_time.txt")
             .expect("unable to open file");
         writeln!(file, "{} \t {:?}", j, average_duration).expect("Unable to write to file");
     }

@@ -2,50 +2,77 @@ warning: virtual workspace defaulting to `resolver = "1"` despite one or more wo
 note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
 note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
 note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded rand_chacha v0.3.1
+  Downloaded ahash v0.8.6
+  Downloaded num-traits v0.2.17
+  Downloaded once_cell v1.19.0
+  Downloaded rustc-hash v1.1.0
+  Downloaded heck v0.4.1
+  Downloaded num-complex v0.1.43
+  Downloaded proc-macro2 v1.0.70
+  Downloaded itertools v0.12.0
+  Downloaded lazy_static v1.4.0
+  Downloaded arrayvec v0.7.4
+  Downloaded bencher v0.1.5
+  Downloaded num-iter v0.1.43
+  Downloaded derive_more v0.99.17
+  Downloaded crossbeam-channel v0.5.8
+  Downloaded libc v0.2.151
+  Downloaded num-rational v0.1.42
+  Downloaded zerocopy v0.7.30
+  Downloaded smallvec v1.11.2
+  Downloaded segvec v0.1.5
+  Downloaded rustc_version v0.4.0
+  Downloaded rand v0.8.5
+  Downloaded duplicate v0.4.1
+  Downloaded crossbeam v0.8.2
+  Downloaded itertools v0.10.5
+  Downloaded syn v1.0.109
+  Downloaded rand v0.4.6
+  Downloaded quote v1.0.33
+  Downloaded petgraph v0.6.4
+  Downloaded cfg-if v1.0.0
+  Downloaded parking_lot_core v0.9.9
+  Downloaded crossbeam-queue v0.3.8
+  Downloaded unicode-ident v1.0.12
+  Downloaded sync-unsafe-cell v0.1.1
+  Downloaded num-bigint v0.1.44
+  Downloaded dashmap v5.5.3
+  Downloaded proc-macro-error v1.0.4
+  Downloaded either v1.9.0
+  Downloaded version_check v0.9.4
+  Downloaded rustc-serialize v0.3.25
+  Downloaded rayon v1.8.0
+  Downloaded ppv-lite86 v0.2.17
+  Downloaded paste v1.0.14
+  Downloaded num v0.1.42
+  Downloaded memoffset v0.9.0
+  Downloaded boxcar v0.1.0
+  Downloaded lock_api v0.4.11
+  Downloaded convert_case v0.4.0
+  Downloaded autocfg v1.1.0
+  Downloaded crossbeam-utils v0.8.16
+  Downloaded instant v0.1.12
+  Downloaded num-integer v0.1.45
+  Downloaded nohash-hasher v0.2.0
+  Downloaded equivalent v1.0.1
+  Downloaded crossbeam-epoch v0.9.15
+  Downloaded const-fnv1a-hash v1.1.0
+  Downloaded hashbrown v0.14.3
+  Downloaded scopeguard v1.2.0
+  Downloaded proc-macro-error-attr v1.0.4
+  Downloaded fixedbitset v0.4.2
+  Downloaded allocator-api2 v0.2.16
+  Downloaded derive-syn-parse v0.1.5
+  Downloaded crossbeam-deque v0.8.3
+  Downloaded indexmap v2.1.0
+  Downloaded getrandom v0.2.11
+  Downloaded semver v1.0.20
+  Downloaded rayon-core v1.12.0
+  Downloaded rand_core v0.6.4
+  Downloaded stopwatch v0.0.7
    Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.95s
-     Running `/home/benches/ascent/target/debug/cspa`
-warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
-note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
-note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
-note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
-   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.94s
-     Running `/home/benches/ascent/target/debug/cspa`
-warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
-note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
-note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
-note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
-    Finished dev [unoptimized + debuginfo] target(s) in 0.03s
-     Running `/home/benches/ascent/target/debug/cspa`
-warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
-note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
-note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
-note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
-   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.94s
-     Running `/home/benches/ascent/target/debug/cspa`
-warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
-note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
-note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
-note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
-   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.92s
-     Running `/home/benches/ascent/target/debug/cspa`
-thread 'main' panicked at library/core/src/time.rs:971:31:
-divide by zero error when dividing duration by scalar
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
-note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
-note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
-note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
-   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.94s
-     Running `/home/benches/ascent/target/debug/cspa`
-warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
-note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
-note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
-note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
-   Compiling cspa v0.1.0 (/home/benches/ascent/cspa)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.96s
+    Finished dev [unoptimized + debuginfo] target(s) in 2.91s
      Running `/home/benches/ascent/target/debug/cspa`
